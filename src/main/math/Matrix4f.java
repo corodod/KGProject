@@ -141,9 +141,6 @@ public final class Matrix4f {
         StringBuilder sb = new StringBuilder();
         for (var array : matrix)
             sb.append(Arrays.toString(array));
-        return "Matrix4f{" +
-                "matrix=" +
-                sb +
-                '}';
+        return "matrix=" + sb;
     }
 }

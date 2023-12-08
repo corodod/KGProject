@@ -39,7 +39,6 @@ public class Vector3fTest {
         Vector3f result = new Vector3f();
 
         result.cross(vector1, vector2);
-        System.out.println(result.x);
 
         assertEquals(0, result.x, 0.001);
         assertEquals(0, result.y, 0.001);
