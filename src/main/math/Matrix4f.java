@@ -147,4 +147,3 @@ public final class Matrix4f {
                 '}';
     }
 }
-

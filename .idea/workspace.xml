@@ -4,7 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1204eac6-e1c1-455d-a4a4-b61b60dc3758" name="Changes" comment="инициализируем там все дела" />
+    <list default="true" id="1204eac6-e1c1-455d-a4a4-b61b60dc3758" name="Changes" comment="инициализируем там все дела">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/KGProject.iml" beforeDir="false" afterPath="$PROJECT_DIR$/KGProject.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/math/Matrix4f.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/math/Matrix4FTest.java" beforeDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -31,21 +36,28 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Downloaded.Files.Path.Enabled": "false",
+    "Repository.Attach.Annotations": "false",
+    "Repository.Attach.JavaDocs": "false",
+    "Repository.Attach.Sources": "false",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "master",
+    "git-widget-placeholder": "main",
     "last_opened_file_path": "C:/Users/shish/IdeaProjects/KGProject",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "onboarding.tips.debug.path": "C:/Users/shish/IdeaProjects/KGProject/src/Main.java",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
-  <component name="RunManager">
+  <component name="RunManager" selected="JUnit.Vector3fTest">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="main.math.Main" />
       <module name="KGProject" />
@@ -53,8 +65,57 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="Matrix4fTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="KGProject" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="test.math.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="test.math" />
+      <option name="MAIN_CLASS_NAME" value="test.math.Matrix4fTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Vector3fTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="KGProject" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="test.math.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="test.math" />
+      <option name="MAIN_CLASS_NAME" value="test.math.Vector3fTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Vector3fTest.testCrossProduct" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="KGProject" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="test.math.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="test.math" />
+      <option name="MAIN_CLASS_NAME" value="test.math.Vector3fTest" />
+      <option name="METHOD_NAME" value="testCrossProduct" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.Vector3fTest" />
+        <item itemvalue="JUnit.Vector3fTest.testCrossProduct" />
+        <item itemvalue="JUnit.Matrix4fTest" />
         <item itemvalue="Application.Main" />
       </list>
     </recent_temporary>
@@ -69,7 +130,8 @@
       <updated>1701615782518</updated>
       <workItem from="1701615783574" duration="3653000" />
       <workItem from="1701952051555" duration="1931000" />
-      <workItem from="1702034337198" duration="1801000" />
+      <workItem from="1702034337198" duration="4929000" />
+      <workItem from="1702040456379" duration="800000" />
     </task>
     <servers />
   </component>
