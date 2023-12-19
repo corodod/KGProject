@@ -1,9 +1,10 @@
 package test.math;
 
 import main.math.Vector3f;
-import org.junit.Test;
 
-import static org.junit.Assert.assertEquals;
+import org.junit.jupiter.api.Test;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+//Junit 5.81
 
 public class Vector3fTest {
     @Test

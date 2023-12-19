@@ -1,101 +1,130 @@
 package main.objwriter;
 
+import main.objtoken.ObjToken;
 import main.math.Vector2f;
 import main.math.Vector3f;
 import main.model.Model;
-import main.model.Polygon;
-import main.objreader.ObjReaderException;
 
-import java.io.BufferedWriter;
-import java.io.File;
-import java.io.FileWriter;
-import java.io.IOException;
-import java.text.DecimalFormat;
-import java.text.DecimalFormatSymbols;
-import java.util.List;
-import java.util.Locale;
+
 
 public class ObjWriter {
+    private Model model;
 
-    public static void write(String fileName, Model model) {
-        File file = new File(fileName);
+    public ObjWriter(Model model) {
+        this.model = model;
+    }
 
-        try {
-            if (file.createNewFile()) {
-                System.out.println("Файл успешно создан: " + file.getName());
-            } else {
-                System.out.println("Файл уже существует.");
+
+    public void setModel(Model model) {
+        this.model = model;
+    }
+
+    public static String getContent(Model model) {
+        ObjWriter writer = new ObjWriter(model);
+        return writer.writeObjFile();
+    }
+
+    public String writeObjFile() {
+        final var lines = new StringBuilder();
+
+        this.appendVerticesInLines(lines);
+        this.appendTexturesInLines(lines);
+        this.appendNormalsInLines(lines);
+        this.appendFacesInLines(lines);
+
+        return lines.toString();
+    }
+
+    private void appendVerticesInLines(StringBuilder lines) {
+        if (this.model.vertices.size() == 0) {
+            throw new IllegalStateException("Can not make an object with out vertices");
+        } else {
+            final var vertices = this.model.vertices;
+
+            for (Vector3f vertex : vertices) {
+                lines.append(this.getVector3fWithTokenInString(vertex, ObjToken.VERTEX)).append("\n");
             }
-        } catch (IOException e) {
-            throw new ObjWriterException(e.getMessage());
-        }
-
-        try (BufferedWriter writer = new BufferedWriter(new FileWriter(fileName))) {
-            writeVertices(writer, model.vertices);
-            writeTextureVertices(writer, model.textureVertices);
-            writeNormals(writer, model.normals);
-            writePolygons(writer, model.polygons);
-        } catch (IOException e) {
-            throw new ObjWriterException(e.getMessage());
         }
     }
 
+    private void appendTexturesInLines(StringBuilder lines) {
+        if (this.model.textureVertices != null) {
+            final var textures = this.model.textureVertices;
 
-    private static void writeVertices(BufferedWriter writer, List<Vector3f> vertices) throws IOException {
-        DecimalFormatSymbols customSymbols = new DecimalFormatSymbols(Locale.US);
-        customSymbols.setDecimalSeparator('.');
-        DecimalFormat decimalFormat = new DecimalFormat("0.######", customSymbols);
-
-        for (Vector3f vertex : vertices) {
-            writer.write("v " + decimalFormat.format(vertex.x) + " " + decimalFormat.format(vertex.y) + " " + decimalFormat.format(vertex.z));
-            writer.newLine();
+            for (Vector2f texture : textures) {
+                lines.append(this.getVector2fWithTokenInString(texture)).append("\n");
+            }
         }
     }
 
-    private static void writeTextureVertices(BufferedWriter writer, List<Vector2f> textureVertices) throws IOException {
-        DecimalFormatSymbols customSymbols = new DecimalFormatSymbols(Locale.US);
-        customSymbols.setDecimalSeparator('.');
-        DecimalFormat decimalFormat = new DecimalFormat("0.######", customSymbols);
+    private void appendNormalsInLines(StringBuilder lines) {
+        if (this.model.normals != null) {
+            final var normals = this.model.normals;
 
-        for (Vector2f textureVertex : textureVertices) {
-            writer.write("vt " + decimalFormat.format(textureVertex.x) + " " + decimalFormat.format(textureVertex.y));
-            writer.newLine();
+            for (Vector3f normal : normals) {
+                lines.append(this.getVector3fWithTokenInString(normal, ObjToken.NORMAL)).append("\n");
+            }
         }
     }
 
-    private static void writeNormals(BufferedWriter writer, List<Vector3f> normals) throws IOException {
-        DecimalFormatSymbols customSymbols = new DecimalFormatSymbols(Locale.US);
-        customSymbols.setDecimalSeparator('.');
-        DecimalFormat decimalFormat = new DecimalFormat("0.######", customSymbols);
+    private void appendFacesInLines(StringBuilder lines) {
+        if (this.model.polygons == null) {
+            throw new IllegalArgumentException("Can not make an object with out polygons");
+        } else {
+            final var polygons = this.model.polygons;
 
-        for (Vector3f normal : normals) {
-            writer.write("vn " + decimalFormat.format(normal.x) + " " + decimalFormat.format(normal.y) + " " + decimalFormat.format(normal.z));
-            writer.newLine();
-        }
-    }
-    private static void writePolygons(BufferedWriter writer, List<Polygon> polygons) throws IOException {
-        for (Polygon polygon : polygons) {
-            writer.write("f ");
-            List<Integer> vertexIndices = polygon.getVertexIndices();
-            List<Integer> textureVertexIndices = polygon.getTextureVertexIndices();
-            List<Integer> normalIndices = polygon.getNormalIndices();
+            for (int i = 0; i < polygons.size(); ++i) {
+                final var polygon = polygons.get(i);
+                lines.append(ObjToken.FACE).append(" ");
 
-            for (int i = 0; i < vertexIndices.size(); i++) {
-                if(!textureVertexIndices.isEmpty()){
-                    writer.write(vertexIndices.get(i) + 1 + "/" + (textureVertexIndices.get(i) + 1));
-                }
-                else{
-                    writer.write(String.valueOf(vertexIndices.get(i) + 1));
-                }
-                if (!normalIndices.isEmpty()) {
-                    if(textureVertexIndices.isEmpty()){
-                        writer.write("/");
+                for (int index = 0; index < polygon.getVertexIndices().size(); ++index) {
+                    lines.append(this.getNumberInString((float) (polygon.getVertexIndices().get(index) + 1)));
+                    Integer textureIndex = null;
+                    if (polygon.getTextureVertexIndices().size() > 0) {
+                        textureIndex = polygon.getTextureVertexIndices().get(index) + 1;
+                        lines.append("/").append(this.getNumberInString(textureIndex)).append(" ");
                     }
-                    writer.write("/" + (normalIndices.get(i) + 1));
+
+                    if (polygon.getNormalIndices().size() > 0) {
+                        if (textureIndex == null) {
+                            lines.append("/");
+                        }
+
+                        lines.append("/").append(this.getNumberInString((float) (polygon.getNormalIndices().get(index) + 1)));
+                    }
+
+                    if (index < polygon.getVertexIndices().size() - 1) {
+                        lines.append(" ");
+                    }
                 }
-                writer.write(" ");
+
+                if (i < polygons.size() - 1) {
+                    lines.append("\n");
+                }
             }
-            writer.newLine();
         }
+    }
+
+    protected String getVector3fWithTokenInString(Vector3f vector3f, ObjToken token) {
+        return token + " " + this.getNumberInString(vector3f.x) + " " + this.getNumberInString(vector3f.y) + " " + this.getNumberInString(vector3f.z);
+    }
+
+    protected String getVector2fWithTokenInString(Vector2f vector2f) {
+        return ObjToken.TEXTURE + " " + this.getNumberInString(vector2f.x) + " " + this.getNumberInString(vector2f.y);
+    }
+
+    protected String getNumberInString(double number) {
+        String result = "";
+        if (number % 1.0F == 0.0F) {
+            result = result + (int) number;
+        } else {
+            result = result + number;
+        }
+
+        return result;
+    }
+
+    protected String getNumberInString(Integer number) {
+        return number.toString();
     }
 }

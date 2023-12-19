@@ -1,63 +1,78 @@
 package main.model;
 
 import java.util.ArrayList;
-import java.util.Objects;
+import java.util.List;
 
 public class Polygon {
+    private List<Integer> vertexIndices;
+    private List<Integer> textureVertexIndices;
+    private List<Integer> normalIndices;
 
-    private ArrayList<Integer> vertexIndices;
-    private ArrayList<Integer> textureVertexIndices;
-    private ArrayList<Integer> normalIndices;
-
-
-    public Polygon(ArrayList<Integer> vertexIndices, ArrayList<Integer> textureVertexIndices, ArrayList<Integer> normalIndices) {
-        this.vertexIndices = vertexIndices;
-        this.textureVertexIndices = textureVertexIndices;
-        this.normalIndices = normalIndices;
-    }
 
     public Polygon() {
-        vertexIndices = new ArrayList<Integer>();
-        textureVertexIndices = new ArrayList<Integer>();
-        normalIndices = new ArrayList<Integer>();
+        vertexIndices = new ArrayList<>();
+        textureVertexIndices = new ArrayList<>();
+        normalIndices = new ArrayList<>();
     }
 
-    public void setVertexIndices(ArrayList<Integer> vertexIndices) {
-//        assert vertexIndices.size() >= 3;
+    public void setVertexIndices(List<Integer> vertexIndices) {
+        if (vertexIndices.size() < 3) {
+            throw new IllegalArgumentException("Illegal number of polygon vertices: " + vertexIndices.size() + ".");
+        }
+
         this.vertexIndices = vertexIndices;
     }
 
-    public void setTextureVertexIndices(ArrayList<Integer> textureVertexIndices) {
-//        assert textureVertexIndices.size() >= 3;
+    public void setTextureVertexIndices(List<Integer> textureVertexIndices) {
+        if (vertexIndices.size() < 3) {
+            throw new IllegalArgumentException("Illegal number of polygon texture vertices: " + textureVertexIndices.size() + ".");
+        }
+
         this.textureVertexIndices = textureVertexIndices;
     }
 
-    public void setNormalIndices(ArrayList<Integer> normalIndices) {
-//        assert normalIndices.size() >= 3;
+    public void setNormalIndices(List<Integer> normalIndices) {
+        if (vertexIndices.size() < 3) {
+            throw new IllegalArgumentException("Illegal number of normals: " + normalIndices.size() + ".");
+        }
+
         this.normalIndices = normalIndices;
     }
 
-    public ArrayList<Integer> getVertexIndices() {
+    public List<Integer> getVertexIndices() {
         return vertexIndices;
     }
 
-    public ArrayList<Integer> getTextureVertexIndices() {
+    public List<Integer> getTextureVertexIndices() {
         return textureVertexIndices;
     }
 
-    public ArrayList<Integer> getNormalIndices() {
+    public List<Integer> getNormalIndices() {
         return normalIndices;
     }
 
     @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (!(o instanceof Polygon polygon)) return false;
-        return Objects.equals(vertexIndices, polygon.vertexIndices) && Objects.equals(textureVertexIndices, polygon.textureVertexIndices) && Objects.equals(normalIndices, polygon.normalIndices);
-    }
+    public String toString() {
+        StringBuilder string = new StringBuilder("f ");
 
-    @Override
-    public int hashCode() {
-        return Objects.hash(vertexIndices, textureVertexIndices, normalIndices);
+        for (int index = 0; index < vertexIndices.size(); index++) {
+            string.append(vertexIndices.get(index));
+
+            if (textureVertexIndices.size() != 0 || normalIndices.size() != 0) {
+                string.append("/");
+                if (textureVertexIndices.size() != 0) {
+                    string.append(textureVertexIndices.get(index));
+                }
+
+                if (normalIndices.size() != 0) {
+                    string.append("/");
+                    string.append(normalIndices.get(index));
+                }
+            }
+
+            string.append(" ");
+        }
+
+        return string.toString();
     }
 }

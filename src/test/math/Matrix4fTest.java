@@ -1,7 +1,10 @@
 package test.math;
+
 import main.math.Matrix4f;
-import org.junit.Test;
-import static org.junit.Assert.*;
+
+import org.junit.jupiter.api.Test;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+//Junit 5.81
 
 public class Matrix4fTest {
     @Test
