@@ -4,15 +4,21 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="648c3c70-322c-4676-a64f-36d204fc1e81" name="Changes" comment="добавление в структуру библиотеки java-swing">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/kgproject/render_utils/RenderEngine.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/kgproject/render_utils/raster_package/DrawingPartsPolygons.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/kgproject/render_utils/raster_package/PolygonRasterization.java" afterDir="false" />
+    <list default="true" id="648c3c70-322c-4676-a64f-36d204fc1e81" name="Changes" comment="workspace edit">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/kgproject/GuiController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/kgproject/GuiController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -86,7 +92,7 @@
       <option name="presentableId" value="Default" />
       <updated>1703591847507</updated>
       <workItem from="1703593773354" duration="387000" />
-      <workItem from="1703602207868" duration="1273000" />
+      <workItem from="1703602207868" duration="1645000" />
     </task>
     <task id="LOCAL-00001" summary="добавление в структуру библиотеки java-swing">
       <option name="closed" value="true" />
@@ -96,7 +102,39 @@
       <option name="project" value="LOCAL" />
       <updated>1703603099827</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="добавление отрисовки частей полигонов">
+      <option name="closed" value="true" />
+      <created>1703603528859</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1703603528859</updated>
+    </task>
+    <task id="LOCAL-00003" summary="добавление растеризации полигона">
+      <option name="closed" value="true" />
+      <created>1703603565580</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1703603565580</updated>
+    </task>
+    <task id="LOCAL-00004" summary="добавление движка рендеринга">
+      <option name="closed" value="true" />
+      <created>1703603589520</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1703603589521</updated>
+    </task>
+    <task id="LOCAL-00005" summary="workspace edit">
+      <option name="closed" value="true" />
+      <created>1703603614270</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1703603614270</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -115,6 +153,10 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="добавление в структуру библиотеки java-swing" />
-    <option name="LAST_COMMIT_MESSAGE" value="добавление в структуру библиотеки java-swing" />
+    <MESSAGE value="добавление отрисовки частей полигонов" />
+    <MESSAGE value="добавление растеризации полигона" />
+    <MESSAGE value="добавление движка рендеринга" />
+    <MESSAGE value="workspace edit" />
+    <option name="LAST_COMMIT_MESSAGE" value="workspace edit" />
   </component>
 </project>

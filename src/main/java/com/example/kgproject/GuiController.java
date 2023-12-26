@@ -1,6 +1,7 @@
 package com.example.kgproject;
 
 
+import com.example.kgproject.render_utils.RenderEngine;
 import javafx.animation.Animation;
 import javafx.animation.KeyFrame;
 import javafx.animation.Timeline;
@@ -173,6 +174,19 @@ public class GuiController {
 
 
     private void renderMesh(AffineModelTransformer model) {
+        ModelSceneOptions options = scene.getModelOptions(model.getModelName());
+
+        RenderEngine.render(canvas.getGraphicsContext2D(),
+                scene.getActiveCamera(),
+                model,
+                (int) canvas.getWidth(),
+                (int) canvas.getHeight(),
+                zBuffer,
+                options.texture,
+                options.usedPolygonalGrid,
+                options.usedTexture,
+                options.usedLighting
+        );
     }
 
     @FXML
