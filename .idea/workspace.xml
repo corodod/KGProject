@@ -5,43 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="648c3c70-322c-4676-a64f-36d204fc1e81" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mvnw" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mvnw.cmd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/kgproject/GuiController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/kgproject/Simple3DViewer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/kgproject/math/MathMethods.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/kgproject/math/Matrix4f.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/kgproject/math/Point2f.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/kgproject/math/RedMe.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/kgproject/math/Vector2f.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/kgproject/math/Vector3f.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/kgproject/model/AffineModelTransformer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/kgproject/model/Model.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/kgproject/model/Polygon.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/kgproject/model/RemovePolygons.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/kgproject/model/RemoveVertices.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/kgproject/objreader/ObjReader.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/kgproject/objreader/ObjReaderException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/kgproject/objtoken/ObjToken.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/kgproject/objwriter/ObjWriter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/kgproject/render_utils/Camera.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/kgproject/render_utils/CoordinateTransformer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/kgproject/render_utils/MovementVector.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/kgproject/render_utils/raster_package/BarycentricCordsUtils.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/kgproject/render_utils/raster_package/PolygonVertex.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/kgproject/render_utils/raster_package/RenderingPreparationClass.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/kgproject/scene/ModelSceneOptions.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/kgproject/scene/Scene.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/gui.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/icons/alert_icon.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/icons/app_icon.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/layouts/gui.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -54,11 +19,12 @@
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "customColor": "",
-  "associatedIndex": 8
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;customColor&quot;: &quot;&quot;,
+  &quot;associatedIndex&quot;: 8
+}</component>
   <component name="ProjectId" id="2a4xq4SavOuB7BDahScjSDW8EQl" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -73,17 +39,23 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "master",
+    "git-widget-placeholder": "main",
+    "last_opened_file_path": "C:/Users/very_/javafx-sdk-17.0.9/lib/javafx.swing.jar",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
-    "project.structure.last.edited": "Modules",
+    "project.structure.last.edited": "Global Libraries",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.42528737",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\very_\Documents\KGProject" />
+    </key>
+  </component>
   <component name="RunManager">
     <configuration name="Simple3DViewer" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.example.kgproject.Simple3DViewer" />
@@ -113,6 +85,7 @@
       <option name="presentableId" value="Default" />
       <updated>1703591847507</updated>
       <workItem from="1703593773354" duration="387000" />
+      <workItem from="1703602207868" duration="793000" />
     </task>
     <servers />
   </component>
