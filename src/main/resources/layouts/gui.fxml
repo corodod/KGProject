@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.canvas.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.input.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane fx:id="anchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity"
+            prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/17.0.2-ea"
+            xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.kgproject.GuiController">
+    <MenuBar prefHeight="20.0" BorderPane.alignment="CENTER">
+        <Menu mnemonicParsing="false" text="File">
+            <MenuItem mnemonicParsing="false" onAction="#onOpenModelMenuItemClick" text="Load Model">
+                <accelerator>
+                    <KeyCodeCombination alt="UP" code="F" control="DOWN" meta="UP" shift="UP" shortcut="UP"/>
+                </accelerator>
+            </MenuItem>
+        </Menu>
+        <Menu mnemonicParsing="false" text="Camera Options">
+            <MenuItem mnemonicParsing="false" onAction="#handleCameraForward" text="Forward">
+                <accelerator>
+                    <KeyCodeCombination alt="DOWN" code="UP" control="UP" meta="UP" shift="UP" shortcut="UP"/>
+                </accelerator>
+            </MenuItem>
+            <MenuItem mnemonicParsing="false" onAction="#handleCameraBackward" text="Backward">
+                <accelerator>
+                    <KeyCodeCombination alt="DOWN" code="DOWN" control="UP" meta="UP" shift="UP" shortcut="UP"/>
+                </accelerator>
+            </MenuItem>
+            <MenuItem mnemonicParsing="false" onAction="#handleCameraLeft" text="Left">
+                <accelerator>
+                    <KeyCodeCombination alt="DOWN" code="LEFT" control="UP" meta="UP" shift="UP" shortcut="UP"/>
+                </accelerator>
+            </MenuItem>
+            <MenuItem mnemonicParsing="false" onAction="#handleCameraRight" text="Right">
+                <accelerator>
+                    <KeyCodeCombination alt="DOWN" code="RIGHT" control="UP" meta="UP" shift="UP" shortcut="UP"/>
+                </accelerator>
+            </MenuItem>
+            <MenuItem mnemonicParsing="false" onAction="#handleCameraUp" text="Up">
+                <accelerator>
+                    <KeyCodeCombination alt="UP" code="W" control="UP" meta="UP" shift="UP" shortcut="UP"/>
+                </accelerator>
+            </MenuItem>
+            <MenuItem mnemonicParsing="false" onAction="#handleCameraDown" text="Down">
+                <accelerator>
+                    <KeyCodeCombination alt="UP" code="S" control="UP" meta="UP" shift="UP" shortcut="UP"/>
+                </accelerator>
+            </MenuItem>
+            <MenuItem mnemonicParsing="false" onAction="#rotateCameraAroundXLeft" text="Left rotate cam">
+                <accelerator>
+                    <KeyCodeCombination alt="UP" code="A" control="UP" meta="UP" shift="UP" shortcut="UP"/>
+                </accelerator>
+            </MenuItem>
+            <MenuItem mnemonicParsing="false" onAction="#rotateCameraAroundXRight" text="Right rotate cam">
+                <accelerator>
+                    <KeyCodeCombination alt="UP" code="D" control="UP" meta="UP" shift="UP" shortcut="UP"/>
+                </accelerator>
+            </MenuItem>
+            <MenuItem mnemonicParsing="false" onAction="#rotateCameraAroundXUp" text="Up rotate cam">
+                <accelerator>
+                    <KeyCodeCombination alt="UP" code="U" control="UP" meta="UP" shift="UP" shortcut="UP"/>
+                </accelerator>
+            </MenuItem>
+            <MenuItem mnemonicParsing="false" onAction="#rotateCameraAroundXDown" text="Down rotate cam">
+                <accelerator>
+                    <KeyCodeCombination alt="UP" code="J" control="UP" meta="UP" shift="UP" shortcut="UP"/>
+                </accelerator>
+            </MenuItem>
+        </Menu>
+    </MenuBar>
+    <VBox alignment="TOP_CENTER" layoutY="40.0" prefHeight="633.0" prefWidth="150.0" spacing="10.0"
+          BorderPane.alignment="CENTER">
+        <BorderPane.margin>
+            <Insets/>
+        </BorderPane.margin>
+        <Accordion>
+            <panes>
+                <TitledPane prefWidth="150.0" text="Active models">
+                    <GridPane>
+                        <columnConstraints>
+                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10"/>
+                            <ColumnConstraints hgrow="SOMETIMES" minWidth="60"/>
+                        </columnConstraints>
+                        <rowConstraints>
+                            <RowConstraints minHeight="25.0" vgrow="SOMETIMES"/>
+                            <RowConstraints minHeight="25.0" vgrow="SOMETIMES"/>
+                            <RowConstraints minHeight="5.0" vgrow="SOMETIMES"/>
+                            <RowConstraints minHeight="25.0" vgrow="SOMETIMES"/>
+                            <RowConstraints minHeight="25" vgrow="SOMETIMES"/>
+                            <RowConstraints minHeight="25.0" vgrow="SOMETIMES"/>
+                            <RowConstraints minHeight="25.0" vgrow="SOMETIMES"/>
+                            <RowConstraints minHeight="25.0" vgrow="SOMETIMES"/>
+                            <RowConstraints minHeight="25.0" vgrow="SOMETIMES"/>
+                            <RowConstraints minHeight="25.0" vgrow="SOMETIMES"/>
+                            <RowConstraints minHeight="25.0" vgrow="SOMETIMES"/>
+                            <RowConstraints minHeight="5.0" vgrow="SOMETIMES"/>
+                            <RowConstraints minHeight="25.0" vgrow="SOMETIMES"/>
+                        </rowConstraints>
+                        <Label text="Active model:" minWidth="120" GridPane.rowIndex="0"/>
+                        <ComboBox fx:id="activeModelComboBox" minWidth="120" GridPane.rowIndex="1"
+                                  onAction="#setActiveModel"/>
+                        <Label text="Rotate X:" maxWidth="70" GridPane.rowIndex="3" GridPane.columnIndex="0"/>
+                        <TextField fx:id="xRotateField" prefWidth="60" minWidth="30" onKeyTyped="#onRotateField" text="0"
+                                   GridPane.rowIndex="3" GridPane.columnIndex="1"/>
+                        <Label text="Rotate Y:" maxWidth="70" GridPane.rowIndex="4" GridPane.columnIndex="0"/>
+                        <TextField fx:id="yRotateField" prefWidth="60" minWidth="30" onKeyTyped="#onRotateField" text="0"
+                                   GridPane.rowIndex="4" GridPane.columnIndex="1"/>
+                        <Label text="Rotate Z:" maxWidth="70" GridPane.rowIndex="5" GridPane.columnIndex="0"/>
+                        <TextField fx:id="zRotateField" prefWidth="60" minWidth="30" onKeyTyped="#onRotateField" text="0"
+                                   GridPane.rowIndex="5" GridPane.columnIndex="1"/>
+                        <Label text="Scale X:" maxWidth="70" GridPane.rowIndex="6" GridPane.columnIndex="0"/>
+                        <TextField fx:id="xScale" prefWidth="60" minWidth="30" onKeyTyped="#onScaleField" text="1"
+                                   GridPane.rowIndex="6" GridPane.columnIndex="1"/>
+                        <Label text="Scale Y:" maxWidth="70" GridPane.rowIndex="7" GridPane.columnIndex="0"/>
+                        <TextField fx:id="yScale" prefWidth="60" minWidth="30" onKeyTyped="#onScaleField" text="1"
+                                   GridPane.rowIndex="7" GridPane.columnIndex="1"/>
+                        <Label text="Scale Z:" maxWidth="70" GridPane.rowIndex="8" GridPane.columnIndex="0"/>
+                        <TextField fx:id="zScale" prefWidth="60" minWidth="30" onKeyTyped="#onScaleField" text="1"
+                                   GridPane.rowIndex="8" GridPane.columnIndex="1"/>
+                        <Label text="Translate X:" maxWidth="70" GridPane.rowIndex="9" GridPane.columnIndex="0"/>
+                        <TextField fx:id="translateX" prefWidth="60" minWidth="30" onKeyTyped="#onTranslateField" text="0"
+                                   GridPane.rowIndex="9" GridPane.columnIndex="1"/>
+                        <Label text="Translate Y:" maxWidth="70" GridPane.rowIndex="10" GridPane.columnIndex="0"/>
+                        <TextField fx:id="translateY" prefWidth="60" minWidth="30" onKeyTyped="#onTranslateField" text="0"
+                                   GridPane.rowIndex="10" GridPane.columnIndex="1"/>
+                        <Label text="Translate Z:" maxWidth="70" GridPane.rowIndex="11" GridPane.columnIndex="0"/>
+                        <TextField fx:id="translateZ" prefWidth="60" minWidth="30" onKeyTyped="#onTranslateField" text="0"
+                                   GridPane.rowIndex="11" GridPane.columnIndex="1"/>
+                        <Button mnemonicParsing="false" onAction="#onSaveModelButton" prefHeight="25.0" minWidth="120"
+                                prefWidth="120" text="Save" GridPane.rowIndex="13"/>
+                    </GridPane>
+                </TitledPane>
+                <TitledPane text="Cameras">
+                    <GridPane>
+                        <columnConstraints>
+                            <ColumnConstraints hgrow="SOMETIMES" maxWidth="30.0" minWidth="10.0" prefWidth="30.0"/>
+                            <ColumnConstraints hgrow="SOMETIMES" maxWidth="90.0" minWidth="90.0" prefWidth="90.0"/>
+                        </columnConstraints>
+                        <rowConstraints>
+                            <RowConstraints minHeight="10.0" vgrow="SOMETIMES"/>
+                            <RowConstraints minHeight="10.0" vgrow="SOMETIMES"/>
+                            <RowConstraints minHeight="5.0" vgrow="SOMETIMES"/>
+                            <RowConstraints minHeight="10.0" vgrow="SOMETIMES"/>
+                            <RowConstraints minHeight="5.0" vgrow="SOMETIMES"/>
+                            <RowConstraints minHeight="10.0" vgrow="SOMETIMES"/>
+                            <RowConstraints minHeight="10.0" vgrow="SOMETIMES"/>
+                        </rowConstraints>
+                        <Label text="x:" GridPane.columnIndex="0" GridPane.rowIndex="0"/>
+                        <TextField fx:id="newCameraX" promptText="0" text="0" GridPane.columnIndex="1"
+                                   GridPane.rowIndex="0"/>
+                        <Label text="y:" GridPane.columnIndex="0" GridPane.rowIndex="1"/>
+                        <TextField fx:id="newCameraY" promptText="0" text="0" GridPane.columnIndex="1"
+                                   GridPane.rowIndex="1"/>
+                        <Label text="z:" GridPane.columnIndex="0" GridPane.rowIndex="2"/>
+                        <TextField fx:id="newCameraZ" promptText="0" text="0" GridPane.columnIndex="1"
+                                   GridPane.rowIndex="2"/>
+                        <Button mnemonicParsing="false" onAction="#onAddCameraButton" prefHeight="25.0" minWidth="120"
+                                prefWidth="120" text="Add Camera" GridPane.rowIndex="4"/>
+                        <Label text="Active camera:" minWidth="120" GridPane.rowIndex="6"/>
+                        <ComboBox fx:id="activeCameraComboBox" minWidth="120" GridPane.rowIndex="7"
+                                  onAction="#setActiveCamera"/>
+                    </GridPane>
+                </TitledPane>
+                <TitledPane text="Render Settings">
+                    <GridPane>
+                        <columnConstraints>
+                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="60"/>
+                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="60"/>
+                        </columnConstraints>
+                        <rowConstraints>
+                            <RowConstraints minHeight="10.0" vgrow="SOMETIMES"/>
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+                            <RowConstraints minHeight="5.0" vgrow="SOMETIMES"/>
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+                        </rowConstraints>
+                        <Label text="Model:" minWidth="120" GridPane.rowIndex="0"/>
+                        <ComboBox fx:id="modelComboBox" minWidth="120" GridPane.rowIndex="1"
+                                  onAction="#unlockCheckBoxes"/>
+                        <CheckBox fx:id="checkPolygonGridBox" text="Use polygon grid"
+                                  onAction="#updateModelSceneOptions"
+                                  minWidth="120" GridPane.rowIndex="2"/>
+                        <CheckBox fx:id="checkTextureBox" text="Use texture" onAction="#updateModelSceneOptions"
+                                  minWidth="120" GridPane.rowIndex="3"/>
+                        <CheckBox fx:id="checkUseLightBox" text="Use lighting" onAction="#updateModelSceneOptions"
+                                  minWidth="120" GridPane.rowIndex="4"/>
+                        <Label text="Texture:" GridPane.columnIndex="0" GridPane.rowIndex="6"/>
+                        <Label fx:id="textureLabel" GridPane.columnIndex="1" GridPane.rowIndex="6"/>
+                        <Button text="Add" minWidth="60" onAction="#onAddTextureButton"
+                                GridPane.rowIndex="7" GridPane.columnIndex="0"/>
+                        <Button text="Delete" minWidth="60" onAction="#onDeleteTextureButton"
+                                GridPane.rowIndex="7" GridPane.columnIndex="1"/>
+                    </GridPane>
+                </TitledPane>
+                <TitledPane prefWidth="150.0" text="Removing Model Parts">
+                    <GridPane>
+                        <columnConstraints>
+                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10"/>
+                            <ColumnConstraints hgrow="SOMETIMES" minWidth="60"/>
+                        </columnConstraints>
+                        <rowConstraints>
+                            <RowConstraints minHeight="25.0" vgrow="SOMETIMES"/>
+                            <RowConstraints minHeight="25.0" vgrow="SOMETIMES"/>
+                            <RowConstraints minHeight="5.0" vgrow="SOMETIMES"/>
+                            <RowConstraints minHeight="25.0" vgrow="SOMETIMES"/>
+                            <RowConstraints minHeight="25" vgrow="SOMETIMES"/>
+                            <RowConstraints minHeight="25.0" vgrow="SOMETIMES"/>
+                            <RowConstraints minHeight="25.0" vgrow="SOMETIMES"/>
+                            <RowConstraints minHeight="25.0" vgrow="SOMETIMES"/>
+                        </rowConstraints>
+                        <Label text="Remove Vertices" minWidth="120" GridPane.rowIndex="0"/>
+                        <Label text="Index Remove:" maxWidth="70" GridPane.rowIndex="1" GridPane.columnIndex="0"/>
+                        <TextField fx:id="idVertic" prefWidth="60" minWidth="30" text="0"
+                                   GridPane.rowIndex="1" GridPane.columnIndex="1"/>
+                        <Button mnemonicParsing="false" onAction="#onRemoveVerticeButton" prefHeight="25.0" minWidth="120"
+                                prefWidth="120" text="Remove" GridPane.rowIndex="3"/>
+                        <Label text="Remove Polygons" minWidth="120" GridPane.rowIndex="4"/>
+                        <Label text="Index Polygon:" maxWidth="70" GridPane.rowIndex="5" GridPane.columnIndex="0"/>
+                        <TextField fx:id="idPolygon" prefWidth="60" minWidth="30" text="0"
+                                   GridPane.rowIndex="5" GridPane.columnIndex="1"/>
+                        <Button mnemonicParsing="false" onAction="#onRemovePolygonButton" prefHeight="25.0" minWidth="120"
+                                prefWidth="120" text="Remove" GridPane.rowIndex="7"/>
+                    </GridPane>
+                </TitledPane>
+            </panes>
+        </Accordion>
+    </VBox>
+    <Canvas fx:id="canvas" height="700.0" layoutX="120.0" layoutY="20.0" width="1130" AnchorPane.topAnchor="25.0"/>
+</AnchorPane>
