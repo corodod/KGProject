@@ -4,13 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="648c3c70-322c-4676-a64f-36d204fc1e81" name="Changes" comment="git.ignore edit">
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/jarRepositories.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" />
+    <list default="true" id="648c3c70-322c-4676-a64f-36d204fc1e81" name="Changes" comment="jars path edit">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -51,7 +46,6 @@
     "Repository.Attach.Sources": "false",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
     "git-widget-placeholder": "main",
     "jdk.selected.JAVA_MODULE": "corretto-17",
@@ -103,7 +97,7 @@
       <workItem from="1703593773354" duration="387000" />
       <workItem from="1703602207868" duration="1645000" />
       <workItem from="1703604998358" duration="938000" />
-      <workItem from="1703606021365" duration="4555000" />
+      <workItem from="1703606021365" duration="6430000" />
     </task>
     <task id="LOCAL-00001" summary="добавление в структуру библиотеки java-swing">
       <option name="closed" value="true" />
@@ -153,7 +147,23 @@
       <option name="project" value="LOCAL" />
       <updated>1703605913725</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="editing library dependencies">
+      <option name="closed" value="true" />
+      <created>1703610792852</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1703610792852</updated>
+    </task>
+    <task id="LOCAL-00008" summary="jars path edit">
+      <option name="closed" value="true" />
+      <created>1703611005704</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1703611005704</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -177,6 +187,8 @@
     <MESSAGE value="добавление движка рендеринга" />
     <MESSAGE value="workspace edit" />
     <MESSAGE value="git.ignore edit" />
-    <option name="LAST_COMMIT_MESSAGE" value="git.ignore edit" />
+    <MESSAGE value="editing library dependencies" />
+    <MESSAGE value="jars path edit" />
+    <option name="LAST_COMMIT_MESSAGE" value="jars path edit" />
   </component>
 </project>
