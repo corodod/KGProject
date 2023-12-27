@@ -6,38 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="648c3c70-322c-4676-a64f-36d204fc1e81" name="Changes" comment="edit pow.xml dependencies">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/kgproject/GuiController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cgvsu/kgproject/GuiController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/kgproject/Simple3DViewer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cgvsu/kgproject/Simple3DViewer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/kgproject/math/MathMethods.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cgvsu/kgproject/math/MathMethods.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/kgproject/math/Matrix4f.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cgvsu/kgproject/math/Matrix4f.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/kgproject/math/Point2f.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cgvsu/kgproject/math/Point2f.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/kgproject/math/RedMe.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cgvsu/kgproject/math/RedMe.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/kgproject/math/Vector2f.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cgvsu/kgproject/math/Vector2f.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/kgproject/math/Vector3f.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cgvsu/kgproject/math/Vector3f.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/kgproject/model/AffineModelTransformer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cgvsu/kgproject/model/AffineModelTransformer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/kgproject/model/Model.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cgvsu/kgproject/model/Model.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/kgproject/model/Polygon.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cgvsu/kgproject/model/Polygon.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/kgproject/model/RemovePolygons.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cgvsu/kgproject/model/RemovePolygons.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/kgproject/model/RemoveVertices.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cgvsu/kgproject/model/RemoveVertices.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/kgproject/objreader/ObjReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cgvsu/kgproject/objreader/ObjReader.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/kgproject/objreader/ObjReaderException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cgvsu/kgproject/objreader/ObjReaderException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/kgproject/objtoken/ObjToken.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cgvsu/kgproject/objtoken/ObjToken.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/kgproject/objwriter/ObjWriter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cgvsu/kgproject/objwriter/ObjWriter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/kgproject/render_utils/Camera.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cgvsu/kgproject/render_utils/Camera.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/kgproject/render_utils/CoordinateTransformer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cgvsu/kgproject/render_utils/CoordinateTransformer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/kgproject/render_utils/MovementVector.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cgvsu/kgproject/render_utils/MovementVector.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/kgproject/render_utils/RenderEngine.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cgvsu/kgproject/render_utils/RenderEngine.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/kgproject/render_utils/raster_package/BarycentricCordsUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cgvsu/kgproject/render_utils/raster_package/BarycentricCordsUtils.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/kgproject/render_utils/raster_package/DrawingPartsPolygons.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cgvsu/kgproject/render_utils/raster_package/DrawingPartsPolygons.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/kgproject/render_utils/raster_package/PolygonRasterization.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cgvsu/kgproject/render_utils/raster_package/PolygonRasterization.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/kgproject/render_utils/raster_package/PolygonVertex.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cgvsu/kgproject/render_utils/raster_package/PolygonVertex.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/kgproject/render_utils/raster_package/RenderingPreparationClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cgvsu/kgproject/render_utils/raster_package/RenderingPreparationClass.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/kgproject/scene/ModelSceneOptions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cgvsu/kgproject/scene/ModelSceneOptions.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/kgproject/scene/Scene.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cgvsu/kgproject/scene/Scene.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/gui.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/gui.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/layouts/gui.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/layouts/gui.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -68,30 +36,30 @@
     <option name="showLibraryContents" value="true" />
     <option name="showVisibilityIcons" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_MARK_IGNORED_FILES_AS_EXCLUDED": "true",
-    "Downloaded.Files.Path.Enabled": "true",
-    "Repository.Attach.Annotations": "false",
-    "Repository.Attach.JavaDocs": "true",
-    "Repository.Attach.Sources": "false",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "main",
-    "jdk.selected.JAVA_MODULE": "corretto-17",
-    "last_opened_file_path": "C:/Users/very_/javafx-sdk-17.0.9",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "project.structure.last.edited": "Libraries",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.42528737",
-    "settings.editor.selected.configurable": "preferences.lookFeel",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_MARK_IGNORED_FILES_AS_EXCLUDED&quot;: &quot;true&quot;,
+    &quot;Downloaded.Files.Path.Enabled&quot;: &quot;true&quot;,
+    &quot;Repository.Attach.Annotations&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.JavaDocs&quot;: &quot;true&quot;,
+    &quot;Repository.Attach.Sources&quot;: &quot;false&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;corretto-17&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/very_/javafx-sdk-17.0.9&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Libraries&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.42528737&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\very_\Documents\KGProject" />
@@ -134,6 +102,8 @@
       <workItem from="1703625647638" duration="2227000" />
       <workItem from="1703628556851" duration="31000" />
       <workItem from="1703670611165" duration="715000" />
+      <workItem from="1703676066247" duration="641000" />
+      <workItem from="1703687661421" duration="338000" />
     </task>
     <task id="LOCAL-00001" summary="добавление в структуру библиотеки java-swing">
       <option name="closed" value="true" />
