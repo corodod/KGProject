@@ -4,9 +4,40 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="648c3c70-322c-4676-a64f-36d204fc1e81" name="Changes" comment="jars path edit">
+    <list default="true" id="648c3c70-322c-4676-a64f-36d204fc1e81" name="Changes" comment="edit pow.xml dependencies">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/kgproject/GuiController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cgvsu/kgproject/GuiController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/kgproject/Simple3DViewer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cgvsu/kgproject/Simple3DViewer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/kgproject/math/MathMethods.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cgvsu/kgproject/math/MathMethods.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/kgproject/math/Matrix4f.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cgvsu/kgproject/math/Matrix4f.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/kgproject/math/Point2f.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cgvsu/kgproject/math/Point2f.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/kgproject/math/RedMe.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cgvsu/kgproject/math/RedMe.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/kgproject/math/Vector2f.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cgvsu/kgproject/math/Vector2f.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/kgproject/math/Vector3f.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cgvsu/kgproject/math/Vector3f.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/kgproject/model/AffineModelTransformer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cgvsu/kgproject/model/AffineModelTransformer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/kgproject/model/Model.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cgvsu/kgproject/model/Model.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/kgproject/model/Polygon.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cgvsu/kgproject/model/Polygon.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/kgproject/model/RemovePolygons.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cgvsu/kgproject/model/RemovePolygons.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/kgproject/model/RemoveVertices.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cgvsu/kgproject/model/RemoveVertices.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/kgproject/objreader/ObjReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cgvsu/kgproject/objreader/ObjReader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/kgproject/objreader/ObjReaderException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cgvsu/kgproject/objreader/ObjReaderException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/kgproject/objtoken/ObjToken.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cgvsu/kgproject/objtoken/ObjToken.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/kgproject/objwriter/ObjWriter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cgvsu/kgproject/objwriter/ObjWriter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/kgproject/render_utils/Camera.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cgvsu/kgproject/render_utils/Camera.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/kgproject/render_utils/CoordinateTransformer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cgvsu/kgproject/render_utils/CoordinateTransformer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/kgproject/render_utils/MovementVector.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cgvsu/kgproject/render_utils/MovementVector.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/kgproject/render_utils/RenderEngine.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cgvsu/kgproject/render_utils/RenderEngine.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/kgproject/render_utils/raster_package/BarycentricCordsUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cgvsu/kgproject/render_utils/raster_package/BarycentricCordsUtils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/kgproject/render_utils/raster_package/DrawingPartsPolygons.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cgvsu/kgproject/render_utils/raster_package/DrawingPartsPolygons.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/kgproject/render_utils/raster_package/PolygonRasterization.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cgvsu/kgproject/render_utils/raster_package/PolygonRasterization.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/kgproject/render_utils/raster_package/PolygonVertex.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cgvsu/kgproject/render_utils/raster_package/PolygonVertex.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/kgproject/render_utils/raster_package/RenderingPreparationClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cgvsu/kgproject/render_utils/raster_package/RenderingPreparationClass.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/kgproject/scene/ModelSceneOptions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cgvsu/kgproject/scene/ModelSceneOptions.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/kgproject/scene/Scene.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cgvsu/kgproject/scene/Scene.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/gui.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/gui.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/layouts/gui.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/layouts/gui.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,12 +80,12 @@
     "WebServerToolWindowFactoryState": "false",
     "git-widget-placeholder": "main",
     "jdk.selected.JAVA_MODULE": "corretto-17",
-    "last_opened_file_path": "C:/Users/very_/.m2/repository/org/openjfx/javafx/17.0.6",
+    "last_opened_file_path": "C:/Users/very_/javafx-sdk-17.0.9",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
-    "project.structure.last.edited": "Modules",
+    "project.structure.last.edited": "Libraries",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.42528737",
     "settings.editor.selected.configurable": "preferences.lookFeel",
@@ -68,11 +99,11 @@
   </component>
   <component name="RunManager">
     <configuration name="Simple3DViewer" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.example.kgproject.Simple3DViewer" />
+      <option name="MAIN_CLASS_NAME" value="com.cgvsu.kgproject.Simple3DViewer" />
       <module name="KGProject" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.example.kgproject.*" />
+          <option name="PATTERN" value="com.cgvsu.kgproject.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -97,7 +128,12 @@
       <workItem from="1703593773354" duration="387000" />
       <workItem from="1703602207868" duration="1645000" />
       <workItem from="1703604998358" duration="938000" />
-      <workItem from="1703606021365" duration="6430000" />
+      <workItem from="1703606021365" duration="10023000" />
+      <workItem from="1703624824808" duration="85000" />
+      <workItem from="1703624927177" duration="614000" />
+      <workItem from="1703625647638" duration="2227000" />
+      <workItem from="1703628556851" duration="31000" />
+      <workItem from="1703670611165" duration="715000" />
     </task>
     <task id="LOCAL-00001" summary="добавление в структуру библиотеки java-swing">
       <option name="closed" value="true" />
@@ -163,7 +199,15 @@
       <option name="project" value="LOCAL" />
       <updated>1703611005704</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="edit pow.xml dependencies">
+      <option name="closed" value="true" />
+      <created>1703612478603</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1703612478603</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -189,6 +233,7 @@
     <MESSAGE value="git.ignore edit" />
     <MESSAGE value="editing library dependencies" />
     <MESSAGE value="jars path edit" />
-    <option name="LAST_COMMIT_MESSAGE" value="jars path edit" />
+    <MESSAGE value="edit pow.xml dependencies" />
+    <option name="LAST_COMMIT_MESSAGE" value="edit pow.xml dependencies" />
   </component>
 </project>
