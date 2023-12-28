@@ -97,6 +97,9 @@
                             <RowConstraints minHeight="25.0" vgrow="SOMETIMES"/>
                             <RowConstraints minHeight="5.0" vgrow="SOMETIMES"/>
                             <RowConstraints minHeight="25.0" vgrow="SOMETIMES"/>
+                            <RowConstraints minHeight="25.0" vgrow="SOMETIMES"/>
+                            <RowConstraints minHeight="25.0" vgrow="SOMETIMES"/>
+                            <RowConstraints minHeight="25.0" vgrow="SOMETIMES"/>
                         </rowConstraints>
                         <Label text="Active model:" minWidth="120" GridPane.rowIndex="0"/>
                         <ComboBox fx:id="activeModelComboBox" minWidth="120" GridPane.rowIndex="1"
@@ -128,8 +131,20 @@
                         <Label text="Translate Z:" maxWidth="70" GridPane.rowIndex="11" GridPane.columnIndex="0"/>
                         <TextField fx:id="translateZ" prefWidth="60" minWidth="30" onKeyTyped="#onTranslateField" text="0"
                                    GridPane.rowIndex="11" GridPane.columnIndex="1"/>
+                        <Label text="Remove Vertices:" minWidth="120" GridPane.rowIndex="12"/>
+                        <Label text="Index Vertic:" maxWidth="70" GridPane.rowIndex="13" GridPane.columnIndex="0"/>
+                        <TextField fx:id="idVertic" prefWidth="60" minWidth="30" text="0"
+                                   GridPane.rowIndex="13" GridPane.columnIndex="1"/>
+                        <Button mnemonicParsing="false" onAction="#onRemoveVerticeButton" prefHeight="25.0" minWidth="120"
+                                prefWidth="120" text="Remove" GridPane.rowIndex="14"/>
+                        <Label text="Remove Polygons:" minWidth="120" GridPane.rowIndex="15"/>
+                        <Label text="Index Polygon:" maxWidth="70" GridPane.rowIndex="16" GridPane.columnIndex="0"/>
+                        <TextField fx:id="idPolygon" prefWidth="60" minWidth="30" text="0"
+                                   GridPane.rowIndex="16" GridPane.columnIndex="1"/>
+                        <Button mnemonicParsing="false" onAction="#onRemovePolygonButton" prefHeight="25.0" minWidth="120"
+                                prefWidth="120" text="Remove" GridPane.rowIndex="17"/>
                         <Button mnemonicParsing="false" onAction="#onSaveModelButton" prefHeight="25.0" minWidth="120"
-                                prefWidth="120" text="Save" GridPane.rowIndex="13"/>
+                                prefWidth="120" text="Save" GridPane.rowIndex="19"/>
                     </GridPane>
                 </TitledPane>
                 <TitledPane text="Cameras">
@@ -194,36 +209,6 @@
                                 GridPane.rowIndex="7" GridPane.columnIndex="0"/>
                         <Button text="Delete" minWidth="60" onAction="#onDeleteTextureButton"
                                 GridPane.rowIndex="7" GridPane.columnIndex="1"/>
-                    </GridPane>
-                </TitledPane>
-                <TitledPane prefWidth="150.0" text="Removing Model Parts">
-                    <GridPane>
-                        <columnConstraints>
-                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10"/>
-                            <ColumnConstraints hgrow="SOMETIMES" minWidth="60"/>
-                        </columnConstraints>
-                        <rowConstraints>
-                            <RowConstraints minHeight="25.0" vgrow="SOMETIMES"/>
-                            <RowConstraints minHeight="25.0" vgrow="SOMETIMES"/>
-                            <RowConstraints minHeight="5.0" vgrow="SOMETIMES"/>
-                            <RowConstraints minHeight="25.0" vgrow="SOMETIMES"/>
-                            <RowConstraints minHeight="25" vgrow="SOMETIMES"/>
-                            <RowConstraints minHeight="25.0" vgrow="SOMETIMES"/>
-                            <RowConstraints minHeight="25.0" vgrow="SOMETIMES"/>
-                            <RowConstraints minHeight="25.0" vgrow="SOMETIMES"/>
-                        </rowConstraints>
-                        <Label text="Remove Vertices" minWidth="120" GridPane.rowIndex="0"/>
-                        <Label text="Index Remove:" maxWidth="70" GridPane.rowIndex="1" GridPane.columnIndex="0"/>
-                        <TextField fx:id="idVertic" prefWidth="60" minWidth="30" text="0"
-                                   GridPane.rowIndex="1" GridPane.columnIndex="1"/>
-                        <Button mnemonicParsing="false" onAction="#onRemoveVerticeButton" prefHeight="25.0" minWidth="120"
-                                prefWidth="120" text="Remove" GridPane.rowIndex="3"/>
-                        <Label text="Remove Polygons" minWidth="120" GridPane.rowIndex="4"/>
-                        <Label text="Index Polygon:" maxWidth="70" GridPane.rowIndex="5" GridPane.columnIndex="0"/>
-                        <TextField fx:id="idPolygon" prefWidth="60" minWidth="30" text="0"
-                                   GridPane.rowIndex="5" GridPane.columnIndex="1"/>
-                        <Button mnemonicParsing="false" onAction="#onRemovePolygonButton" prefHeight="25.0" minWidth="120"
-                                prefWidth="120" text="Remove" GridPane.rowIndex="7"/>
                     </GridPane>
                 </TitledPane>
             </panes>
