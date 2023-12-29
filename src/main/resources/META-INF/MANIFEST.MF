@@ -1,17 +1,17 @@
 Manifest-Version: 1.0
 Main-Class: com.cgvsu.kgproject.Simple3DViewer
-Class-Path: countries-17.0.23.jar kotlin-stdlib-common-1.6.0.jar javafx-
- base-17.0.6.jar jackson-databind-2.12.1.jar javafx-graphics-17.0.6.jar 
- javafx-controls-17.0.6.jar javafx-fxml-17.0.6-win.jar validatorfx-0.4.0
- .jar javafx-web-17.0.6.jar javafx-media-17.0.6.jar javafx-graphics-17.0
- .6-win.jar lifecycle-4.0.13.jar fxgl-17.2.jar fxgl-entity-17.2.jar stor
- age-4.0.13.jar ikonli-core-12.3.1.jar annotations-13.0.jar heatmap-17.0
- .12.jar jackson-annotations-2.12.1.jar fxgl-io-17.2.jar audio-4.0.13.ja
- r javafx-controls-17.0.6-win.jar controlsfx-11.1.2.jar fxgl-gameplay-17
- .2.jar fxgl-scene-17.2.jar tilesfx-17.1.17.jar javafx-fxml-17.0.6.jar j
- avafx-media-17.0.6-win.jar fxgl-core-17.2.jar ikonli-javafx-12.3.1.jar 
- kotlin-stdlib-1.6.0-modular.jar javafx-web-17.0.6-win.jar util-4.0.13.j
- ar jackson-core-2.12.1.jar toolboxfx-17.0.33.jar javafx-base-17.0.6-win
- .jar formsfx-core-11.6.0.jar bootstrapfx-core-0.4.0.jar toolbox-17.0.35
+Class-Path: heatmap-17.0.12.jar javafx-controls-17.0.6.jar audio-4.0.13.
+ jar kotlin-stdlib-1.6.0-modular.jar formsfx-core-11.6.0.jar jackson-ann
+ otations-2.12.1.jar storage-4.0.13.jar javafx-base-17.0.6-win.jar annot
+ ations-13.0.jar toolboxfx-17.0.33.jar ikonli-core-12.3.1.jar fxgl-core-
+ 17.2.jar javafx-media-17.0.6-win.jar kotlin-stdlib-common-1.6.0.jar jav
+ afx-fxml-17.0.6.jar javafx-media-17.0.6.jar fxgl-17.2.jar bootstrapfx-c
+ ore-0.4.0.jar javafx-web-17.0.6-win.jar javafx-graphics-17.0.6.jar fxgl
+ -gameplay-17.2.jar jackson-core-2.12.1.jar tilesfx-17.1.17.jar javafx-g
+ raphics-17.0.6-win.jar javafx-fxml-17.0.6-win.jar countries-17.0.23.jar
+  javafx-base-17.0.6.jar fxgl-io-17.2.jar controlsfx-11.1.2.jar validato
+ rfx-0.4.0.jar javafx-controls-17.0.6-win.jar toolbox-17.0.35.jar fxgl-e
+ ntity-17.2.jar util-4.0.13.jar javafx-web-17.0.6.jar jackson-databind-2
+ .12.1.jar lifecycle-4.0.13.jar ikonli-javafx-12.3.1.jar fxgl-scene-17.2
  .jar
 
