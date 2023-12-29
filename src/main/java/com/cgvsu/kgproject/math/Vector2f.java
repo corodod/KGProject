@@ -8,6 +8,16 @@ public final class Vector2f {
         this.y = y;
     }
 
+    public float get(int index) {
+        switch (index) {
+            case 0:
+                return x;
+            case 1:
+                return y;
+            default:
+                throw new IndexOutOfBoundsException("Index should be 0, 1, or 2 for Vector2f");
+        }
+    }
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;

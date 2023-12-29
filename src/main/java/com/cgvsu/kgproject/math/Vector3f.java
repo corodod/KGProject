@@ -28,6 +28,18 @@ public final class Vector3f {
         this.y = to.y - from.y;
         this.z = to.z - from.z;
     }
+    public float get(int index) {
+        switch (index) {
+            case 0:
+                return x;
+            case 1:
+                return y;
+            case 2:
+                return z;
+            default:
+                throw new IndexOutOfBoundsException("Index should be 0, 1, or 2 for Vector3f");
+        }
+    }
 
     public void cross(Vector3f v1, Vector3f v2) {
         if (v1 == null || v2 == null) {
