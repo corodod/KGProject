@@ -1,0 +1,49 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="KGProject:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/KGProject_jar</output-path>
+    <root id="archive" name="KGProject_jar.jar">
+      <element id="archive" name="KGProject.jar">
+        <element id="module-output" name="KGProject" />
+      </element>
+      <element id="library" level="project" name="Maven: eu.hansolo.fx:countries:17.0.23" />
+      <element id="library" level="project" name="Maven: org.jetbrains.kotlin:kotlin-stdlib-common:1.6.0" />
+      <element id="library" level="project" name="Maven: org.openjfx:javafx-base:17.0.6" />
+      <element id="library" level="project" name="Maven: com.fasterxml.jackson.core:jackson-databind:2.12.1" />
+      <element id="library" level="project" name="Maven: org.openjfx:javafx-graphics:17.0.6" />
+      <element id="library" level="project" name="Maven: org.openjfx:javafx-controls:17.0.6" />
+      <element id="library" level="project" name="Maven: org.openjfx:javafx-fxml:win:17.0.6" />
+      <element id="library" level="project" name="Maven: net.synedra:validatorfx:0.4.0" />
+      <element id="library" level="project" name="Maven: org.openjfx:javafx-web:17.0.6" />
+      <element id="library" level="project" name="Maven: org.openjfx:javafx-media:17.0.6" />
+      <element id="library" level="project" name="Maven: org.openjfx:javafx-graphics:win:17.0.6" />
+      <element id="library" level="project" name="Maven: com.gluonhq.attach:lifecycle:4.0.13" />
+      <element id="library" level="project" name="Maven: com.github.almasb:fxgl:17.2" />
+      <element id="library" level="project" name="Maven: com.github.almasb:fxgl-entity:17.2" />
+      <element id="library" level="project" name="Maven: com.gluonhq.attach:storage:4.0.13" />
+      <element id="library" level="project" name="Maven: org.kordamp.ikonli:ikonli-core:12.3.1" />
+      <element id="library" level="project" name="Maven: org.jetbrains:annotations:13.0" />
+      <element id="library" level="project" name="Maven: eu.hansolo.fx:heatmap:17.0.12" />
+      <element id="library" level="project" name="Maven: com.fasterxml.jackson.core:jackson-annotations:2.12.1" />
+      <element id="library" level="project" name="Maven: com.github.almasb:fxgl-io:17.2" />
+      <element id="library" level="project" name="Maven: com.gluonhq.attach:audio:4.0.13" />
+      <element id="library" level="project" name="Maven: org.openjfx:javafx-controls:win:17.0.6" />
+      <element id="library" level="project" name="Maven: org.controlsfx:controlsfx:11.1.2" />
+      <element id="library" level="project" name="Maven: com.github.almasb:fxgl-gameplay:17.2" />
+      <element id="library" level="project" name="Maven: com.github.almasb:fxgl-scene:17.2" />
+      <element id="library" level="project" name="Maven: eu.hansolo:tilesfx:17.1.17" />
+      <element id="library" level="project" name="Maven: org.openjfx:javafx-fxml:17.0.6" />
+      <element id="library" level="project" name="Maven: org.openjfx:javafx-media:win:17.0.6" />
+      <element id="library" level="project" name="Maven: com.github.almasb:fxgl-core:17.2" />
+      <element id="library" level="project" name="Maven: org.kordamp.ikonli:ikonli-javafx:12.3.1" />
+      <element id="library" level="project" name="Maven: org.jetbrains.kotlin:kotlin-stdlib:modular:1.6.0" />
+      <element id="library" level="project" name="Maven: org.openjfx:javafx-web:win:17.0.6" />
+      <element id="library" level="project" name="Maven: com.gluonhq.attach:util:4.0.13" />
+      <element id="library" level="project" name="Maven: com.fasterxml.jackson.core:jackson-core:2.12.1" />
+      <element id="library" level="project" name="Maven: eu.hansolo:toolboxfx:17.0.33" />
+      <element id="library" level="project" name="Maven: org.openjfx:javafx-base:win:17.0.6" />
+      <element id="library" level="project" name="Maven: com.dlsc.formsfx:formsfx-core:11.6.0" />
+      <element id="library" level="project" name="Maven: org.kordamp.bootstrapfx:bootstrapfx-core:0.4.0" />
+      <element id="library" level="project" name="Maven: eu.hansolo:toolbox:17.0.35" />
+    </root>
+  </artifact>
+</component>
