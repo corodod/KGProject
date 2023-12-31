@@ -2,6 +2,7 @@ package com.cgvsu.kgproject.render_utils;
 
 
 
+import com.cgvsu.kgproject.math.MathMethods;
 import com.cgvsu.kgproject.math.Matrix4f;
 import com.cgvsu.kgproject.math.Vector3f;
 
@@ -107,15 +108,15 @@ public final class Camera {
         this.target.x = newTarget.x * distance;
         this.target.z = newTarget.z * distance;
 
-        if(horizontalAngle == 180) {
+        if(MathMethods.isEqual(horizontalAngle, 180)) {
             this.target.z = position.z - distance + deltaTargetPosition.z;
             this.target.x = 0;
         }
-        if(horizontalAngle == 0) {
+        if(MathMethods.isEqual(horizontalAngle, 0)) {
             this.target.z = position.z + deltaTargetPosition.z;
             this.target.x = 0;
         }
-        if(Math.abs(horizontalAngle) == 90 || Math.abs(horizontalAngle) == 270) {
+        if( MathMethods.isEqual(Math.abs(horizontalAngle), 90) || MathMethods.isEqual(Math.abs(horizontalAngle), 270)) {
             this.target.z = 0;
         }
     }
@@ -138,15 +139,15 @@ public final class Camera {
         this.target.y = newTarget.y * distance;
         this.target.z = newTarget.z * distance;
 
-        if(verticalAngle == 180) {
+        if(MathMethods.isEqual(verticalAngle, 180)) {
             this.target.z = position.z - distance + deltaTargetPosition.z;
             this.target.y = 0;
         }
-        if(verticalAngle == 0) {
+        if(MathMethods.isEqual(verticalAngle, 0)) {
             this.target.z = position.z + deltaTargetPosition.z;
             this.target.y = 0;
         }
-        if(Math.abs(verticalAngle) == 90 || Math.abs(verticalAngle) == 270) {
+        if(MathMethods.isEqual(Math.abs(verticalAngle), 90) || MathMethods.isEqual(Math.abs(verticalAngle), 270)) {
             this.target.z = 0;
         }
     }
