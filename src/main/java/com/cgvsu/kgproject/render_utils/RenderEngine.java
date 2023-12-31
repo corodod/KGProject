@@ -15,7 +15,7 @@ import javafx.scene.paint.Color;
 import java.util.ArrayList;
 import java.util.List;
 
-import static com.cgvsu.kgproject.math.Point2f.vertexToPoint;
+import static com.cgvsu.kgproject.math.Point2f.projectedPointToScreenCoordinates;
 
 public class RenderEngine {
     // ChangedModel, углы, масштабирование, перемещение, Model.
@@ -77,7 +77,7 @@ public class RenderEngine {
                 final var vertex = mesh.getTransformedVector(currentVertexIndex);
                 Vector3f rotatedPoint = modelViewProjectionMatrix.multiplyByVector3(vertex);
 
-                final var resultPoint = vertexToPoint(rotatedPoint, width, height);
+                final var resultPoint = projectedPointToScreenCoordinates(rotatedPoint, width, height);
                 resultPoints.add(new PolygonVertex((int) resultPoint.x, (int) resultPoint.y, rotatedPoint.z,
                         texture, normal, vertex));
                 // Здесь мне нужно приведение к int, т.к. растеризация была написана для целых x и y, чтобы не было
@@ -127,7 +127,7 @@ public class RenderEngine {
                 final var vertex = mesh.getTransformedVector(currentVertexIndex);
                 Vector3f rotatedPoint = modelViewProjectionMatrix.multiplyByVector3(vertex);
 
-                final var resultPoint = vertexToPoint(rotatedPoint, width, height);
+                final var resultPoint = projectedPointToScreenCoordinates(rotatedPoint, width, height);
                 resultPoints.add(new PolygonVertex((int) resultPoint.x, (int) resultPoint.y, rotatedPoint.z,
                         mesh.getTexture().get(textureIndex), normal, vertex));
             }

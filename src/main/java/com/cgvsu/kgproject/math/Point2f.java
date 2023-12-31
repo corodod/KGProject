@@ -9,7 +9,7 @@ public final class Point2f {
         this.y = y;
     }
 
-    public static Point2f vertexToPoint(final Vector3f vertex, final int width, final int height) {
+    public static Point2f projectedPointToScreenCoordinates(final Vector3f vertex, final int width, final int height) {
         return new Point2f(vertex.x * width + width / 2.0F, -vertex.y * height + height / 2.0F);
     }
 

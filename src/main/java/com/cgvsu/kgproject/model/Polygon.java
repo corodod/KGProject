@@ -51,9 +51,9 @@ public class Polygon {
         return normalIndices;
     }
 
-    public void offset(int index) {
+    public void shiftIndicesAfterRemoval(int deletedIndex) {
         for (int i = 0; i < vertexIndices.size(); i++) {
-            if (vertexIndices.get(i) > index) {
+            if (vertexIndices.get(i) > deletedIndex) {
                 vertexIndices.set(i, vertexIndices.get(i) - 1);
             }
         }

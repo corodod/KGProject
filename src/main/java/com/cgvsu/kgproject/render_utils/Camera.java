@@ -152,7 +152,7 @@ public final class Camera {
     }
 
     Matrix4f getViewMatrix() {
-        return CoordinateTransformer.lookAt(position, target);
+        return Matrix4f.lookAt(position, target);
     }
 
     public Vector3f getPosition() {
@@ -160,7 +160,7 @@ public final class Camera {
     }
 
     Matrix4f getProjectionMatrix() {
-        return CoordinateTransformer.perspective(fov, aspectRatio, nearPlane, farPlane);
+        return Matrix4f.perspective(fov, aspectRatio, nearPlane, farPlane);
     }
 }
 

@@ -80,16 +80,10 @@ public final class Vector3f {
         this.z += t1.z;
     }
 
-    public void scaleX(float scale) {
-        this.x *= scale;
-    }
-
-    public void scaleY(float scale) {
-        this.y *= scale;
-    }
-
-    public void scaleZ(float scale) {
-        this.z *= scale;
+    public void scale(Vector3f scale) {
+        this.x *= scale.x;
+        this.y *= scale.y;
+        this.z *= scale.z;
     }
 
     public static Vector3f fromTwoPoints(Vector3f vertex1, Vector3f vertex2) {

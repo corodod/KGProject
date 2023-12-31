@@ -13,12 +13,8 @@ public class AffineModelTransformer {
     private final List<Polygon> triangulatedPolygons;
 
     private Vector3f translatedVector;
-    private float rotateAngleX;
-    private float rotateAngleY;
-    private float rotateAngleZ;
-    private float scaleX;
-    private float scaleY;
-    private float scaleZ;
+    private Vector3f rotationAngles;
+    private Vector3f scale;
 
     public AffineModelTransformer(Model model) {
         if (model == null) {
@@ -28,9 +24,8 @@ public class AffineModelTransformer {
         this.initialModel = model;
         this.triangulatedPolygons = triangulateAndRecalculateNormals(model);
         this.translatedVector = new Vector3f();
-        this.scaleX = 1;
-        this.scaleY = 1;
-        this.scaleZ = 1;
+        this.rotationAngles = new Vector3f();
+        this.scale = new Vector3f(1, 1, 1);
     }
 
     public String getModelName() {
@@ -55,15 +50,11 @@ public class AffineModelTransformer {
     }
 
     public void setRotate(Vector3f rotateVector) {
-        this.rotateAngleX = (float) Math.toRadians(rotateVector.x);
-        this.rotateAngleY = (float) Math.toRadians(rotateVector.y);
-        this.rotateAngleZ = (float) Math.toRadians(rotateVector.z);
+        this.rotationAngles = rotateVector;
     }
 
     public void setScale(Vector3f scaleVector) {
-        this.scaleX = scaleVector.x;
-        this.scaleY = scaleVector.y;
-        this.scaleZ = scaleVector.z;
+        this.scale = scaleVector;
     }
 
     public void setTranslatedVector(Vector3f translatedVector) {
@@ -73,9 +64,7 @@ public class AffineModelTransformer {
     public Vector3f getTransformedVector(int index) {
         final var defaultVector = initialModel.vertices.get(index);
         var transformedVector = new Vector3f(defaultVector.x, defaultVector.y, defaultVector.z);
-        transformedVector.scaleX(scaleX);
-        transformedVector.scaleY(scaleY);
-        transformedVector.scaleZ(scaleZ);
+        transformedVector.scale(scale);
         transformedVector = getRotationMatrix().multiplyByVector3(transformedVector);
         transformedVector.add(translatedVector);
         return transformedVector;
@@ -99,7 +88,7 @@ public class AffineModelTransformer {
     }
 
     public Matrix4f getRotationMatrix() {
-        return Matrix4f.rotationMatrix(rotateAngleX, rotateAngleY, rotateAngleZ);
+        return Matrix4f.rotationMatrix(rotationAngles.x, rotationAngles.y, rotationAngles.z);
     }
 
     public Model getTriangulatedModel() {
