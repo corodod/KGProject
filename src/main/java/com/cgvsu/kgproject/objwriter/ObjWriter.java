@@ -4,129 +4,74 @@ package com.cgvsu.kgproject.objwriter;
 import com.cgvsu.kgproject.math.Vector2f;
 import com.cgvsu.kgproject.math.Vector3f;
 import com.cgvsu.kgproject.model.Model;
-import com.cgvsu.kgproject.objtoken.ObjToken;
+import com.cgvsu.kgproject.model.Polygon;
+
+import java.io.FileWriter;
+import java.io.IOException;
+import java.util.Locale;
 
 
 
 public class ObjWriter {
-    private Model model;
 
-    public ObjWriter(Model model) {
-        this.model = model;
-    }
+    public static void write(String fileContent, Model model) {
+        Locale.setDefault(Locale.US);
 
-
-    public void setModel(Model model) {
-        this.model = model;
-    }
-
-    public static String getContent(Model model) {
-        ObjWriter writer = new ObjWriter(model);
-        return writer.writeObjFile();
-    }
-
-    public String writeObjFile() {
-        final var lines = new StringBuilder();
-
-        this.appendVerticesInLines(lines);
-        this.appendTexturesInLines(lines);
-        this.appendNormalsInLines(lines);
-        this.appendFacesInLines(lines);
-
-        return lines.toString();
-    }
-
-    private void appendVerticesInLines(StringBuilder lines) {
-        if (this.model.vertices.size() == 0) {
-            throw new IllegalStateException("Can not make an object with out vertices");
-        } else {
-            final var vertices = this.model.vertices;
-
-            for (Vector3f vertex : vertices) {
-                lines.append(this.getVector3fWithTokenInString(vertex, ObjToken.VERTEX)).append("\n");
+        try (FileWriter fw = new FileWriter(fileContent, false)) {
+            for (Vector3f a : model.vertices) {
+                fw.write(String.format("v %.4f %.4f %.4f%n", a.get(0), a.get(1), a.get(2)));
             }
-        }
-    }
+            fw.write(String.format("# %d vertices%n%n", model.vertices.size()));
 
-    private void appendTexturesInLines(StringBuilder lines) {
-        if (this.model.textureVertices != null) {
-            final var textures = this.model.textureVertices;
-
-            for (Vector2f texture : textures) {
-                lines.append(this.getVector2fWithTokenInString(texture)).append("\n");
+            for (Vector2f a : model.textureVertices) {
+                fw.write(String.format("vt %.4f %.4f%n", a.get(0), a.get(1)));
             }
-        }
-    }
+            fw.write(String.format("# %d texture coords%n%n", model.textureVertices.size()));
 
-    private void appendNormalsInLines(StringBuilder lines) {
-        if (this.model.normals != null) {
-            final var normals = this.model.normals;
-
-            for (Vector3f normal : normals) {
-                lines.append(this.getVector3fWithTokenInString(normal, ObjToken.NORMAL)).append("\n");
+            for (Vector3f a : model.normals) {
+                fw.write(String.format("vn %.4f %.4f %.4f%n", a.get(0), a.get(1), a.get(2)));
             }
-        }
-    }
+            fw.write(String.format("# %d normals%n%n", model.normals.size()));
 
-    private void appendFacesInLines(StringBuilder lines) {
-        if (this.model.polygons == null) {
-            throw new IllegalArgumentException("Can not make an object with out polygons");
-        } else {
-            final var polygons = this.model.polygons;
-
-            for (int i = 0; i < polygons.size(); ++i) {
-                final var polygon = polygons.get(i);
-                lines.append(ObjToken.FACE).append(" ");
-
-                for (int index = 0; index < polygon.getVertexIndices().size(); ++index) {
-                    lines.append(this.getNumberInString((float) (polygon.getVertexIndices().get(index) + 1)));
-                    Integer textureIndex = null;
-                    if (polygon.getTextureVertexIndices().size() > 0) {
-                        textureIndex = polygon.getTextureVertexIndices().get(index) + 1;
-                        lines.append("/").append(this.getNumberInString(textureIndex)).append(" ");
+            int triangles = 0;
+            for (Polygon p : model.polygons) {
+                int k = p.getVertexIndices().size();
+                if (k == 3) {
+                    triangles++;
+                }
+                fw.append("f");
+                if (p.getTextureVertexIndices().isEmpty() && p.getNormalIndices().isEmpty()) {
+                    for (int i = 0; i < k; i++) {
+                        fw.write(String.format(" %d", p.getVertexIndices().get(i)+1));
                     }
 
-                    if (polygon.getNormalIndices().size() > 0) {
-                        if (textureIndex == null) {
-                            lines.append("/");
-                        }
-
-                        lines.append("/").append(this.getNumberInString((float) (polygon.getNormalIndices().get(index) + 1)));
+                } else if (!p.getTextureVertexIndices().isEmpty() && p.getNormalIndices().isEmpty()) {
+                    for (int i = 0; i < k; i++) {
+                        fw.write(String.format(" %d/%d", p.getVertexIndices().get(i)+1, p.getTextureVertexIndices().get(i)+1));
                     }
-
-                    if (index < polygon.getVertexIndices().size() - 1) {
-                        lines.append(" ");
+                } else if (p.getTextureVertexIndices().isEmpty() && !p.getNormalIndices().isEmpty()) {
+                    for (int i = 0; i < k; i++) {
+                        fw.write(String.format(" %d//%d", p.getVertexIndices().get(i)+1, p.getNormalIndices().get(i)+1));
+                    }
+                } else if (!p.getTextureVertexIndices().isEmpty() && !p.getNormalIndices().isEmpty()) {
+                    for (int i = 0; i < k; i++) {
+                        fw.write(String.format(" %d/%d/%d", p.getVertexIndices().get(i)+1, p.getTextureVertexIndices().get(i)+1, p.getNormalIndices().get(i)+1));
                     }
                 }
-
-                if (i < polygons.size() - 1) {
-                    lines.append("\n");
-                }
+                fw.append("\n");
             }
-        }
-    }
+            fw.write(String.format("# %d polygons - %d triangles\n", model.polygons.size()-triangles, triangles));
 
-    protected String getVector3fWithTokenInString(Vector3f vector3f, ObjToken token) {
-        return token + " " + this.getNumberInString(vector3f.x) + " " + this.getNumberInString(vector3f.y) + " " + this.getNumberInString(vector3f.z);
-    }
 
-    protected String getVector2fWithTokenInString(Vector2f vector2f) {
-        return ObjToken.TEXTURE + " " + this.getNumberInString(vector2f.x) + " " + this.getNumberInString(vector2f.y);
-    }
+            fw.flush();
+        } catch (IOException ex) {
 
-    protected String getNumberInString(double number) {
-        String result = "";
-        if (number % 1.0F == 0.0F) {
-            result = result + (int) number;
-        } else {
-            result = result + number;
+            System.out.println(ex.getMessage());
         }
 
-        return result;
+
     }
 
-    protected String getNumberInString(Integer number) {
-        return number.toString();
-    }
+
 }
 

@@ -566,23 +566,20 @@ public class GuiController {
         if (activeModelComboBox.getValue() == null) {
             return;
         }
-
         FileChooser fileChooser = new FileChooser();
-        fileChooser.getExtensionFilters().add(new FileChooser.ExtensionFilter("Model (*.obj)", "*.obj"));
         fileChooser.setTitle("Save Model");
+        fileChooser.getExtensionFilters().add(new FileChooser.ExtensionFilter("Wavefront OBJ files (*.obj)", "*.obj"));
 
-        File file = fileChooser.showSaveDialog(canvas.getScene().getWindow());
-        if (file == null) {
-            return;
-        }
+        File file = fileChooser.showSaveDialog(new Stage());
 
-        Path fileName = Path.of(file.getAbsolutePath());
-        try {
-            PrintWriter out = new PrintWriter(new File(fileName.toUri()));
-            out.println(ObjWriter.getContent(scene.getModel(activeModelComboBox.getValue()).getTriangulatedModel()));
-            out.close();
-        } catch (FileNotFoundException e) {
-            showAlert("File with this name not found");
+        if (file != null) {
+            String chosenFilePath = file.getAbsolutePath();
+
+            if (!chosenFilePath.toLowerCase().endsWith(".obj")) {
+                chosenFilePath += ".obj";
+            }
+
+            ObjWriter.write(chosenFilePath, scene.getModel(activeModelComboBox.getValue()).getModel());
         }
     }
 }
